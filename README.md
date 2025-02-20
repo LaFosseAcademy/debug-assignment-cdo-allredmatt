@@ -10,7 +10,7 @@ Then navigate to the directory using the terminal.
 
 Add IAM user and add security keys to your terminal environment using the [following guide](https://docs.aws.amazon.com/cli/v1/userguide/cli-authentication-user.html).
 
-If you have the need for a more powerful server you may want to edit the `instance_type = "t2.micro"` on line 17 in the main.tf file. Change it to your required size - see [aws docs](https://aws.amazon.com/ec2/instance-types/) for more infomation.
+If you have the need for a more powerful server you may want to edit the `instance_type = "t2.micro"` on line 17 in the main.tf file. Change it to your required size - see [aws docs](https://aws.amazon.com/ec2/instance-types/) for more information.
 
 If the default AMI image fails in the future due to amazon releases you can amend line 15 in main.tf `ami = "ami-053a45fff0a704a47"` see this [guide](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html) to assist you. 
 
@@ -43,9 +43,9 @@ NB: You may need to run WSL on a windows computer to run these commands, again s
 
 #### Edit config files
 
-Open the ansible_hosts file in the ansible directory and edit the IP address, replacing it with the extenal [IP4 address](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/working-with-ip-addresses.html#using-instance-addressing-common) of your EC2 instance.
+Open the ansible_hosts file in the ansible directory and edit the IP address, replacing it with the external [IP4 address](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/working-with-ip-addresses.html#using-instance-addressing-common) of your EC2 instance.
 
-You can check this is working with the coomand
+You can check this is working with the command
 
 `ansible -m ping all`
 
@@ -63,7 +63,7 @@ You will need access to the docker-compose file on your EC2 machine. You can use
 
 `ansible-playbook playbooks/docker-run.yml`
 
-Default images have been build using docker and are hosted on docker hub, no additional setup is required. If you want to build you own images then changing the image names in the configuration files will be needed. If you want to host local files then you can copy these over to your EC2 instance using a similar scp command.
+Default images have been built using docker and are hosted on docker hub, no additional setup is required. If you want to build your own images then changing the image names in the configuration files will be needed. If you want to host local files then you can copy these over to your EC2 instance using a similar scp command.
 
 #### Seeing the application
 
