@@ -1,0 +1,6 @@
+- hosts: all
+  tasks:
+  - name: Make directory for docker-compose files
+    shell: mkdir devops-assessment
+    args:
+      chdir: /home/ec2-user
