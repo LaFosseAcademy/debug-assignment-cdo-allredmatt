@@ -63,6 +63,8 @@ You will need access to the docker-compose file on your EC2 machine. You can use
 
 `ansible-playbook playbooks/docker-run.yml`
 
+Default images have been build using docker and are hosted on docker hub, no additional setup is required. If you want to build you own images then changing the image names in the configuration files will be needed. If you want to host local files then you can copy these over to your EC2 instance using a similar scp command.
+
 #### Seeing the application
 
 In the aws console copy the Public IP4 DNS Address of EC2 instance, in a browser or postman go to `http://<your DNS address>:3000` to access your api. Or look at the following endpoints to test:
